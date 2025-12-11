@@ -11,15 +11,15 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: sans-serif;
+            background-color: #b787e8;
         }
         #timer {
-            font-size: 48px;
+            font-size: 40px;
         }
         #header {
-            font-size: 24px;
-            margin-bottom: 20px; /* Отступ от текста до таймера */
+            font-size: 48px;
+            margin-bottom: 40px; /* Отступ от текста до таймера */
         }
     </style>
 </head>
@@ -47,14 +47,14 @@
             const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
             // Обновляем элемент таймера
-            document.getElementById('timer').textContent = days + " дн. " + hours + " ч. " + minutes + " мин. " + seconds + " сек.";
+            document.getElementById('timer').textContent = days + " d " + hours + " h " + minutes + " m " + seconds + " s";
         }
 
         // Первоначальное обновление
         updateTimer();
 
         // Запускаем обновление каждую секунду
-        setInterval(updateTimer, 1000);
+        setInterval(updateTimer, 1);
     </script>
 </body>
 </html>
